@@ -1,0 +1,169 @@
+.navbar {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 200px;
+  background-color: transparent;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  padding-right: 100px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: black;
+}
+
+.nav-link {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: black;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 5px 12px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+  border-color: #999;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.search-bar:focus-within {
+  border-color: #999;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 6px;
+  font-size: 14px;
+  width: 200px;
+  background: transparent;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.search-button:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.signin-btn {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.signin-btn:hover {
+  color: black;
+}
+
+.nav-links a.active,
+.nav-link.active {
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 20px 50px;
+  }
+  
+  .nav-links {
+    padding-right: 50px;
+  }
+  
+  .search-bar input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  
+  .nav-links {
+    padding-right: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+  }
+  
+  .auth-buttons {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+}

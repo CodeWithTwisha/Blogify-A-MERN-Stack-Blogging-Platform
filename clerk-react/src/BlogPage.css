@@ -1,0 +1,404 @@
+
+.blogpage-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.blog-content {
+  flex: 3;
+  padding-right: 20px;
+}
+
+.blog-cover {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.blog-description {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.blog-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.blog-actions-container {
+  margin: 30px 0;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  gap: 15px;
+}
+
+.blog-action-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+
+.blog-action-btn:hover {
+  background: #f5f5f5;
+}
+
+.blog-action-like.liked {
+  color: #ff0000;
+  border-color: #ffcccc;
+  background: #fff0f0;
+}
+
+.blog-action-message {
+  color: green;
+  margin-left: 10px;
+  align-self: center;
+  font-size: 0.9rem;
+}
+
+.comments-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.comments-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.comments-list {
+  margin-bottom: 20px;
+}
+
+.comment {
+  position: relative;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-user-info img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-user-info strong {
+  font-size: 1rem;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.comment-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.comment-actions button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.comment-text {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.edit-comment {
+  margin-top: 15px;
+}
+
+.edit-comment-input {
+  width: 80%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.edit-comment-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.edit-comment-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.edit-comment-buttons button.cancel-btn {
+  background: none;
+  color: #666;
+}
+
+.edit-comment-buttons button.save-btn {
+  background: none;
+  color: #666;
+}
+
+.edit-comment-buttons button.cancel-btn:hover,
+.edit-comment-buttons button.save-btn:hover {
+  color: #000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.add-comment {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.add-comment input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.add-comment button {
+  padding: 0 20px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.add-comment button:hover {
+  background: #3a6fc8;
+}
+
+.sidebar {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.popular-posts {
+  margin-top: 20px;
+}
+
+.popular-posts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.popular-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.popular-card:hover {
+  background-color: #f5f5f5;
+}
+
+.popular-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.popular-card h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.popular-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .blogpage-container {
+    flex-direction: column;
+    width: 95%;
+  }
+  
+  .blog-content {
+    padding-right: 0;
+  }
+  
+  .sidebar {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  
+  .blog-title {
+    font-size: 2rem;
+  }
+  
+  .edit-comment-input {
+    width: 100%;
+  }
+
+  .blog-actions-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .blogpage-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-cover {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogpage-container {
+    flex-direction: column;
+    width: 95%;
+  }
+  
+  .blog-content {
+    padding-right: 0;
+  }
+  
+  .sidebar {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  
+  .blog-title {
+    font-size: 2rem;
+  }
+  
+  .edit-comment-input {
+    width: 100%;
+  }
+
+  .blog-actions-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .popular-card {
+    flex-direction: column;
+  }
+
+  .popular-card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .blog-cover {
+    height: 250px;
+  }
+  
+  .blog-title {
+    font-size: 1.8rem;
+  }
+  
+  .comment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .comment-actions {
+    margin-top: 10px;
+  }
+  
+  .edit-comment-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .edit-comment-buttons button {
+    width: 100%;
+  }
+  
+  .add-comment {
+    flex-direction: column;
+  }
+  
+  .add-comment button {
+    width: 100%;
+  }
+}

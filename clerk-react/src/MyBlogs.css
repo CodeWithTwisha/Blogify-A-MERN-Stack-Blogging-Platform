@@ -1,0 +1,250 @@
+
+  .my-blogs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .create-new-btn {
+    background-color: black;
+    
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .create-new-btn:hover {
+    background-color: #3a6fc8;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  
+  .error {
+    color: #e74c3c;
+  }
+  
+  .no-blogs {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+  
+  .no-blogs p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .create-btn {
+    background-color: #4a89dc;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+  }
+  
+  .create-btn:hover {
+    background-color: #3a6fc8;
+  }
+  
+  .blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .blog-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: white;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .blog-content {
+    padding: 1.5rem;
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .blog-content h3 {
+    margin: 0 0 1rem;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+  }
+  
+  .blog-content h3:hover {
+    color: #4a89dc;
+  }
+  
+  .description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.5;
+  }
+  
+  .blog-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+  
+  .date {
+    order: -1;
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.3rem;
+  }
+  
+  .category {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+  
+  .category.technology {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  .category.health {
+    background-color: #e8f5e9;
+    color: #388e3c;
+  }
+  
+  .category.business {
+    background-color: #f3e5f5;
+    color: #8e24aa;
+  }
+  
+  .category.education {
+    background-color: #fff8e1;
+    color: #ffa000;
+  }
+  
+  .blog-actions {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+  }
+  
+  .edit-btn:hover, .delete-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .blogs-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+@media (max-width: 1200px) {
+  .blogs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .create-new-btn {
+    margin-top: 10px;
+  }
+  
+  .blog-actions {
+    position: static;
+    margin-top: 15px;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 576px) {
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .blog-image {
+    height: 160px;
+  }
+  
+  .blog-content {
+    min-height: auto;
+  }
+}
